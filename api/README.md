@@ -33,9 +33,9 @@ URL_BASE: http://127.0.0.1:5000/ ó http://localhost:5000/
 
 - `GET /tickets` -> Lista todos los tickets (200 OK).
 - `POST /tickets` -> Crea nuevo ticket (201 Created).
-- `PUT /tickets/<int:id>` -> Edita título y descripción (200 OK).
-- `PATCH /tickets/<int:id>` -> Edita título o descripción (200 OK).
-- `DELETE /tickets/<int:id>` -> Elimina ticket (204 No Content).
+- `PUT /tickets/<id>` -> Edita título y descripción (200 OK).
+- `PATCH /tickets/<id>` -> Edita título o descripción (200 OK).
+- `DELETE /tickets/<id>` -> Elimina ticket (204 No Content).
 
 ## Ejemplo de usos para Endpoints
 
@@ -140,3 +140,14 @@ Status: 204 No Content
 
 > API en desarrollo. Solo está disponible en entorno local (`localhost:5000`).  
 > Conforme avance el proyecto este archivo se irá actualizando.
+
+
+## Testing
+Este proyecto utiliza `pytest` para realizar pruebas unitarias, funcionales y de integración.
+Para correr las pruebas se debe ejecutar desde la raiz del proyecto /api el comando:
+`python -m pytest -v`
+
+Para un reporte en html se debe ejecutar el comando:
+`python -m pytest -v --html=report.html`
+
+> Al momento se tienen pruebas funcionales y de integración sobre los endpoints de /tickets. Validando la creación, edición y eliminación de tickets y consulta de tickets.
